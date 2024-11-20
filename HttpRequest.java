@@ -9,7 +9,7 @@ public class HttpRequest implements Serializable{
     //协议
     private String protocol;
     //请求方式
-    private String type;
+    private String method;
     //uri
     private String uri;
     //请求头
@@ -22,11 +22,11 @@ public class HttpRequest implements Serializable{
     public void setProtocol(String protocol) {
         this.protocol = protocol;
     }
-    public String getType() {
-        return type;
+    public String getMethod() {
+        return method;
     }
-    public void setType(String type) {
-        this.type = type;
+    public void setMethod(String method) {
+        this.method = method;
     }
     public String getUri() {
         return uri;
@@ -48,7 +48,7 @@ public class HttpRequest implements Serializable{
     }
     @Override
     public String toString() {
-        return "HttpRequest [protocol=" + protocol + ", type=" + type + ", uri=" + uri + ", header=" + header
+        return "HttpRequest [protocol=" + protocol + ", method=" + method + ", uri=" + uri + ", header=" + header
                 + ", body=" + body + "]";
     }
     

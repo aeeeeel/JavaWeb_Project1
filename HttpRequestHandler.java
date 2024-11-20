@@ -9,10 +9,10 @@ public class HttpRequestHandler{
     byte[]buf=new byte[1024];
         int len;
         try {
-            while (inputstream.available()>0) {
+            do{
                 len=inputstream.read(buf);
                 request.append(new String(buf,0,len));
-            }
+            }while (inputstream.available()>0) ;
         } catch (IOException e) {
             // TODO Auto-generated catch block//应当处理这个异常
             e.printStackTrace();
